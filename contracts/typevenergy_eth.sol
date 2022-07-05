@@ -6,7 +6,7 @@ import "./typevenergy_base.sol";
 contract TypeVEnergyEth is TypeVEnergyBase{
     bytes32 public constant PREDICATE_ROLE = keccak256("PREDICATE_ROLE");
 
-    constructor(address[] memory initialWhitelist, address mintableAssetProxy) TypeVEnergyBase(initialWhitelist) {
+ constructor(address[] memory initialWhitelist, address initAdminWallet, address mintableAssetProxy) TypeVEnergyBase(initialWhitelist, initAdminWallet) {
         _grantRole(PREDICATE_ROLE, mintableAssetProxy);
     }
 
